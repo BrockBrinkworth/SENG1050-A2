@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="template.xsl"?>
+
+<!DOCTYPE TEMPLATE [
+<!ELEMENT TEMPLATE (holiday+)>
+	<!ELEMENT holiday (PackageName, HolidayCategory, Description, Cost, NumberOfNights, Popularity, AccomodationOptions+, CouponCode?, Reviews*, Link+)>
+	<!ELEMENT PackageName (#PCDATA)>
+	<!ATTLIST PackageName HolidayType (Type1|Type2|Type3) #REQUIRED>
+	<!ELEMENT HolidayCategory (#PCDATA)>
+	<!ELEMENT Description (#PCDATA)>
+	<!ELEMENT Cost (#PCDATA)>
+	<!ELEMENT NumberOfNights (#PCDATA)>
+	<!ELEMENT Popularity (#PCDATA)>
+	<!ATTLIST Popularity Stars (1|2|3|4|5) "5">
+	<!ELEMENT AccomodationOptions (Location, AdditionalCost, HotelName, RoomType)>
+		<!ELEMENT Location (#PCDATA)>
+		<!ELEMENT AdditionalCost (#PCDATA)>
+		<!ELEMENT HotelName (#PCDATA)>
+		<!ELEMENT RoomType (#PCDATA)>
+	<!ELEMENT CouponCode (#PCDATA)>
+	<!ELEMENT Reviews (#PCDATA)>
+	<!ELEMENT Link (Image, Webpage)>
+		<!ELEMENT Image (#PCDATA)>
+		<!ELEMENT Webpage (#PCDATA)>
+]>
+
+<!--AdventureHoliday.xml-->
+<!--Brock Brinkworth c3331952-->
+<!--:11/09/2020 -->
+
+<TEMPLATE>
+	<holiday><!--Reference: https://www.flightcentre.com.au/product/6444028-->
+		<PackageName HolidayType="Type1">Costa Rica Turtle Conservation</PackageName>
+		<HolidayCategory>Adventure Holidays</HolidayCategory>
+		<Description>This holiday package is a 9 day tour in Costa Rica in 8 night shared dorm accomodation with meals and flight.</Description>
+		<Cost>$1200 per person</Cost>
+		<NumberOfNights>8</NumberOfNights>
+		<Popularity>4</Popularity>
+		<AccomodationOptions>
+			<Location>Costa Rica</Location>
+			<AdditionalCost>$0</AdditionalCost>
+			<HotelName>Caribbean Hotel</HotelName>
+			<RoomType>Normal</RoomType>
+		</AccomodationOptions>
+		<CouponCode>Adventure</CouponCode>
+		<Reviews>1326 reviews with 4 of 5 stars</Reviews>
+		<Link>
+			<Image>../c3331952/images/CostaRica.jpg</Image>
+			<Webpage value="link1">https://www.flightcentre.com.au/product/6444028</Webpage>
+		</Link>
+	</holiday>
+	<holiday><!--Reference: https://www.flightcentre.com.au/product/13081103-->
+		<PackageName HolidayType="Type2">Iconic Blue Mountains Walk</PackageName>
+		<HolidayCategory></HolidayCategory>
+		<Description>This holiday package comes with accommodation in the blue mountains and a tour of the walking tracks.</Description>
+		<Cost>$1400 per person</Cost>
+		<NumberOfNights>2</NumberOfNights>
+		<Popularity>5</Popularity>
+		<AccomodationOptions>
+			<Location>Blue Mountains</Location>
+			<AdditionalCost>$300</AdditionalCost>
+			<HotelName>Katoomba Inn</HotelName>
+			<RoomType>Upgraded cabin</RoomType>
+		</AccomodationOptions>
+		<CouponCode>Expedition</CouponCode>
+		<Reviews>682 with 5 of 5 stars</Reviews>
+		<Link>
+			<Image>../c3331952/images/BlueMountain.jpg</Image>
+			<Webpage value="link2">https://www.flightcentre.com.au/product/13081103</Webpage>
+		</Link>
+	</holiday>
+	<holiday><!--Reference: https://www.flightcentre.com.au/product/6444296-->
+		<PackageName HolidayType="Type3">Street Dog Rescue in Kathmandu</PackageName>
+		<HolidayCategory></HolidayCategory>
+		<Description>This holiday package comes with accommodation and meals in Kathmandu where you will be volunteering to rescue dogs.</Description>
+		<Cost>$1250</Cost>
+		<NumberOfNights>13</NumberOfNights>
+		<Popularity>4</Popularity>
+		<AccomodationOptions>
+			<Location>Kathmandu</Location>
+			<AdditionalCost>$50</AdditionalCost>
+			<HotelName>Kathmandu Multi Share Hotel</HotelName>
+			<RoomType>Share</RoomType>
+		</AccomodationOptions>
+		<CouponCode>Savour</CouponCode>
+		<Reviews>1956 with 4 of 5 stars</Reviews>
+		<Link>
+			<Image>../c3331952/images/Kathmandu.jpg</Image>
+			<Webpage value="link3">https://www.flightcentre.com.au/product/6444296</Webpage>
+		</Link>
+	</holiday>
+</TEMPLATE>

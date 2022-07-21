@@ -1,0 +1,136 @@
+<!--DataCollectionPage.html-->
+<!--Brock Brinkworth c3331952-->
+<!--:22/10/2020 -->
+
+<!DOCTYPE html>
+
+<html lang="en">
+   <head>
+		
+		<script type="text/JavaScript">
+			function validateForm() 
+			{
+				var phonePattern = /^\+?(\d*|(\d|\s|\(\d+\))*)$/;
+				var emailPattern = /^.*@.*\..*$/;
+				
+				if (window.document.form1.fname.value == "" ||
+					window.document.form1.lname.value == "" ||
+					window.document.form1.desc.value == "" ||
+					window.document.form1.email.value.indexOf("@") == -1) 
+				{
+					alert("First Name, Last Name and Description must be filled out");
+					return false;
+				}
+				else if (!phonePattern.test(document.form1.phone.value))
+				{
+					alert("Invalid phone number.");
+					return false;
+				}
+				else if (!emailPattern.test(document.form1.email.value))
+				{
+					alert("Invalid email address.");
+					return false;
+				}
+				return true;
+            }
+		</script>
+		
+		<meta charset="UTF-8">
+		
+		<title>Holiday Ideas Form</title>
+		
+		<link rel="stylesheet" type="text/css" href="Style.css">
+    
+   </head>
+
+   <body class="data">
+   
+		<hr>
+			
+			<div id="navbar">
+				<!--Links to XML Files-->
+				<nav>
+					<a href="Index.html">Home Page</a> 
+					<a href="BeachHoliday.xml">Beach Holiday</a> 
+					<a href="AdventureHoliday.xml">Adventure Holiday</a>
+					<a href="PrivacyPolicy.html">Privacy Policy</a>
+					<a href="TermAndConditions.html">Terms and Conditions</a>
+					<a href="ContactUs.html">Contact Us</a>
+					<a href="AboutUs.html">About Us</a> 
+				</nav>
+			</div>
+			
+		<hr>
+
+    <h1>Holiday Ideas Form</h1>
+    
+	<form name="form1" method="post" action="http://jkorpela.fi/cgi-bin/echo.cgi" onSubmit="return validateForm()" >
+		<!--Personal Details-->
+		Personal Details
+		<fieldset>
+		<label for="fname">First Name</label>
+		<input type="text" placeholder="First name only" name="fname" />
+		<span style="color:red">*required field</span>
+		<br/>
+		<label for="lname">Last Name</label>
+		<input type="text" placeholder="Last name only" name="lname" />
+		<span style="color:red">*required field</span>
+		<br/>
+		<label for="email">Please enter your email address:</label>
+		<input type="text" name="email" id="email" placeholder="YourEmail@domain.com" />
+		<span style="color:red">*Email needs to be Valid </span>
+		<br/>
+		<label for="phone">Please enter your phone number:</label>
+        <input type="text" name="phone" id="phone">
+		<span style="color:red">*required field</span>
+		<br/>
+		</fieldset>
+		<!--Holiday Details-->
+		Information about Previous Holidays
+		<fieldset>
+		Amount of Previous Holidays you have submitted here
+		<input type="number" placeholder="123" />
+		<br/>
+		Amount of Holidays you Disliked
+		<input type="number" placeholder="123" />
+		<br/>
+		</fieldset>
+		<!--Suggested Holiday Details-->
+		Information About a Suggested Holiday
+		<fieldset>
+		Name of the Holiday
+		<input type ="text" placeholder="Holiday Name" />
+		<br/>
+		<label for="holidaylist">Choose a Holiday category</label>
+		<select name="holidaylist" />
+			<option value="0">Select an Option</option>
+			<option value="1">Adventure</option>
+			<option value="2">Beach</option>
+		</select>
+		<!--<span style="color:red">*required field</span>-->
+		<br/>
+		Description of Holiday<span style="color:red">*required field</span>
+		<br/>
+		<textarea name="message" rows="10" cols="30" placeholder="Description" name="desc"></textarea>
+		<br/>
+		<input type="checkbox" id="check1" name="check1" value="accomm" />
+		<label for="check1"> Accommodation Pricing is Included</label><br/>
+		<input type="checkbox" id="check2" name="check2" value="coupon" />
+		<label for="check2"> A Coupon Code is Known</label><br/>
+		
+		<!--Submit Form/Clear Form-->
+		</fieldset>
+		Submit Form
+		<input type="submit" />
+		Clear Form
+		<input type="reset" />
+	</form>
+		
+	</body>
+	
+	<footer>
+		<!--Important Headings-->
+		<h3>Copy Righted to GoHoliday <br/> Email: goholiday@gmail.com</h3>
+	</footer>
+	
+</html>

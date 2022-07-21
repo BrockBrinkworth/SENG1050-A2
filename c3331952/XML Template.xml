@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="template.xsl"?>
+
+<!DOCTYPE TEMPLATE [
+<!ELEMENT TEMPLATE (holiday+)>
+	<!ELEMENT holiday (PackageName, HolidayCategory, Description, Cost, NumberOfNights, Popularity, AccomodationOptions+, CouponCode?, Reviews*, Link+)>
+	<!ELEMENT PackageName (#PCDATA)>
+	<!ATTLIST PackageName HolidayType (Type1|Type2|Type3) #REQUIRED>
+	<!ELEMENT HolidayCategory (#PCDATA)>
+	<!ELEMENT Description (#PCDATA)>
+	<!ELEMENT Cost (#PCDATA)>
+	<!ELEMENT NumberOfNights (#PCDATA)>
+	<!ELEMENT Popularity (#PCDATA)>
+	<!ATTLIST Popularity Stars (1|2|3|4|5) "5">
+	<!ELEMENT AccomodationOptions (Location, AdditionalCost, HotelName, RoomType)>
+		<!ELEMENT Location (#PCDATA)>
+		<!ELEMENT AdditionalCost (#PCDATA)>
+		<!ELEMENT HotelName (#PCDATA)>
+		<!ELEMENT RoomType (#PCDATA)>
+	<!ELEMENT CouponCode (#PCDATA)>
+	<!ELEMENT Reviews (#PCDATA)>
+	<!ELEMENT Link (Image, Webpage)>
+		<!ELEMENT Image (#PCDATA)>
+		<!ELEMENT Webpage (#PCDATA)>
+]>
+
+<!--XML Template.xml-->
+<!--Brock Brinkworth c3331952-->
+<!--:11/09/2020 -->
+
+<TEMPLATE>
+	<holiday>
+		<holiday><!--Reference: -->
+		<PackageName HolidayType="Type1">Package Name</PackageName>
+		<HolidayCategory></HolidayCategory>
+		<Description></Description>
+		<Cost></Cost>
+		<NumberOfNights></NumberOfNights>
+		<Popularity></Popularity>
+		<AccomodationOptions>
+			<Location></Location>
+			<AdditionalCost></AdditionalCost>
+			<HotelName></HotelName>
+			<RoomType></RoomType>
+		</AccomodationOptions>
+		<CouponCode></CouponCode>
+		<Reviews></Reviews>
+		<Link>
+			<Image></Image>
+			<Webpage></Webpage>
+		</Link>
+	</holiday>
+</TEMPLATE>

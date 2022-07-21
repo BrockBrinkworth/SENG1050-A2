@@ -1,0 +1,126 @@
+<!--ContactUs.html-->
+<!--Brock Brinkworth c3331952-->
+<!--:21/10/2020 -->
+
+<!DOCTYPE html>
+
+<html lang="en">
+	
+   <head>
+	
+		<script type="text/JavaScript">
+			function validateForm() 
+			{
+				var phonePattern = /^\+?(\d*|(\d|\s|\(\d+\))*)$/;
+				var emailPattern = /^.*@.*\..*$/;
+				
+				if (window.document.form1.fname.value == "" ||
+					window.document.form1.lname.value == "" ||
+					window.document.form1.desc.value == "" ||
+					window.document.form1.email.value.indexOf("@") == -1) 
+				{
+					alert("First Name, Last Name and Description must be filled out");
+					return false;
+				}
+				else if (!phonePattern.test(document.form1.phone.value))
+				{
+					alert("Invalid phone number.");
+					return false;
+				}
+				else if (!emailPattern.test(document.form1.email.value))
+				{
+					alert("Invalid email address.");
+					return false;
+				}
+				return true;
+            }
+		</script>
+	
+		<meta charset="UTF-8">
+		
+		<title>Contact US</title>
+		
+		<link rel="stylesheet" type="text/css" href="Style.css">
+
+   </head>
+		
+   <body class="contact">
+      
+		<hr>
+			
+			<div id="navbar">
+				<!--Links to XML Files-->
+				<nav>
+					<a href="Index.html">Home Page</a> 
+					<a href="BeachHoliday.xml">Beach Holiday</a> 
+					<a href="AdventureHoliday.xml">Adventure Holiday</a>
+					<a href="PrivacyPolicy.html">Privacy Policy</a>
+					<a href="TermAndConditions.html">Terms and Conditions</a>
+					<a href="AboutUs.html">About Us</a> 
+					<a href="DataCollectionPage.html">Holiday Ideas Form</a>
+				</nav>
+			</div>
+			
+		<hr>
+		
+		<h2>CONTACT US</h2>
+		<form name="form1" method="post" action="http://jkorpela.fi/cgi-bin/echo.cgi" onsubmit="return validateForm()" >
+		
+			<fieldset>
+				<label for="fname">First Name</label>
+				<input type="text" placeholder="First name only" name="fname" />
+				<span style="color:red">*required field</span>
+				<br/>
+				<label for="lname">Last Name</label>
+				<input type="text" placeholder="Last name only" name="lname" />
+				<span style="color:red">*required field</span>
+				<br/>
+				<label for="email">Please enter your email address:</label>
+				<input type="text" name="email" id="email" placeholder="YourEmail@domain.com" />
+				<span style="color:red">*Email needs to be Valid </span>
+				<br/>
+				<label for="phone">Please enter your phone number:</label>
+				<input type="text" name="phone" id="phone">
+				<span style="color:red">*required field</span>
+				<br/>
+				<label for="mess">Message and additional details</label>
+				<span style="color:red">*required field</span>
+				<br/>
+				<textarea name="message" rows="10" cols="30" placeholder="Description" name="mess"></textarea>
+				<br/>
+			</fieldset>
+			
+			<!--Submit Form/Clear Form-->
+			</fieldset>
+			<p>Submit Form</p>
+			<input type="submit" />
+			<p>Clear Form</p>
+			<input type="reset" />
+		
+		</form>
+		
+		<!--Important Headings-->
+		<h2>Contact Information</h2>
+		<p>Please contact us at: 
+			<br/>
+			Goholiday
+			<br/>
+			University Dr
+			<br/>
+			Callaghan, New South Wales 2308
+			<br/>
+			Australia
+			<br/>
+			Phone: 04xxxxxxxx
+			<br/>
+			goholiday@gmail.com
+		</p>
+		
+		<footer>
+			<!--Important Headings-->
+			<h3>Copy Righted to GoHoliday <br/> Email: goholiday@gmail.com</h3>
+		</footer>
+	
+   </body>
+   
+ </html>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="template.xsl"?>
+
+<!DOCTYPE TEMPLATE [
+<!ELEMENT TEMPLATE (holiday+)>
+	<!ELEMENT holiday (PackageName, HolidayCategory, Description, Cost, NumberOfNights, Popularity, AccomodationOptions+, CouponCode?, Reviews*, Link+)>
+	<!ELEMENT PackageName (#PCDATA)>
+	<!ATTLIST PackageName HolidayType (Type1|Type2|Type3) #REQUIRED>
+	<!ELEMENT HolidayCategory (#PCDATA)>
+	<!ELEMENT Description (#PCDATA)>
+	<!ELEMENT Cost (#PCDATA)>
+	<!ELEMENT NumberOfNights (#PCDATA)>
+	<!ELEMENT Popularity (#PCDATA)>
+	<!ATTLIST Popularity Stars (1|2|3|4|5) "5">
+	<!ELEMENT AccomodationOptions (Location, AdditionalCost, HotelName, RoomType)>
+		<!ELEMENT Location (#PCDATA)>
+		<!ELEMENT AdditionalCost (#PCDATA)>
+		<!ELEMENT HotelName (#PCDATA)>
+		<!ELEMENT RoomType (#PCDATA)>
+	<!ELEMENT CouponCode (#PCDATA)>
+	<!ELEMENT Reviews (#PCDATA)>
+	<!ELEMENT Link (Image, Webpage)>
+		<!ELEMENT Image (#PCDATA)>
+		<!ELEMENT Webpage (#PCDATA)>
+]>
+
+<!--BeachHoliday.xml-->
+<!--Brock Brinkworth c3331952-->
+<!--:11/09/2020 -->
+
+<TEMPLATE>
+	<holiday><!--Reference: https://www.jetstarholidays.com.au/SYD/HTI/HTIDPKG/4109-->
+		<PackageName HolidayType="Type1">Reef View Hotel Beach Holiday</PackageName>
+		<HolidayCategory>Beach Holidays</HolidayCategory>
+		<Description>This Hotel is on the beaches of Hamilton island off Queensland. This holiday package will sort flights, food, ammenities, hotels and more. </Description>
+		<Cost>$3000 per person.</Cost>
+		<NumberOfNights>3</NumberOfNights>
+		<Popularity>4</Popularity>
+		<AccomodationOptions>
+			<Location>12 Resort Drive, Hamilton Island, Queensland 4803, AU</Location>
+			<AdditionalCost>$0</AdditionalCost>
+			<HotelName>Reef View Hotel</HotelName>
+			<RoomType>Normal room</RoomType>
+		</AccomodationOptions>
+		<CouponCode>Beachviews</CouponCode>
+		<Reviews>3011 reviews recieving 4 out of 5 stars</Reviews>
+		<Link>
+			<Image>../c3331952/images/hamiltonisland.jpg</Image>
+			<Webpage value="link1">https://www.jetstarholidays.com.au/SYD/HTI/HTIDPKG/4109</Webpage>
+		</Link>
+	</holiday>
+	<holiday><!--Reference: https://jetstarholidays.com.au/MEL/PER/PERDPKG/414136-->
+		<PackageName HolidayType="Type2">Ramada Vetroblu Scarborough Beach Holiday</PackageName>
+		<HolidayCategory></HolidayCategory>
+		<Description>This Holiday package comes with accommodation, flights and a beach view.</Description>
+		<Cost>$3500 per person</Cost>
+		<NumberOfNights>3</NumberOfNights>
+		<Popularity>5</Popularity>
+		<AccomodationOptions>
+			<Location>48A Filburn Street, Scarborough, Western Australia 6019, AU</Location>
+			<AdditionalCost>$500</AdditionalCost>
+			<HotelName>Ramada Vetroblu Scarborough Beach</HotelName>
+			<RoomType>Upgraded room and service</RoomType>
+		</AccomodationOptions>
+		<CouponCode></CouponCode>
+		<Reviews>78 reviews recieving 5 stars</Reviews>
+		<Link>
+			<Image>../c3331952/images/Ramada.jpg</Image>
+			<Webpage value="link2">https://jetstarholidays.com.au/MEL/PER/PERDPKG/414136</Webpage>
+		</Link>
+	</holiday>
+	<holiday><!--Reference: https://www.jetstarholidays.com.au/SYD/MCY/MCYDPKG/5471-->
+		<PackageName HolidayType="Type3">Mantra Mooloolaba Beach Holiday</PackageName>
+		<HolidayCategory></HolidayCategory>
+		<Description>This holiday package comes with accommodation, flights and beach views.</Description>
+		<Cost>$2750 per person</Cost>
+		<NumberOfNights>3</NumberOfNights>
+		<Popularity>4</Popularity>
+		<AccomodationOptions>
+			<Location>Esplanade, Mooloolaba, Queensland 4557, AU</Location>
+			<AdditionalCost>$100</AdditionalCost>
+			<HotelName>Mantra Mooloolaba Beach Hotel</HotelName>
+			<RoomType>Normal with service</RoomType>
+		</AccomodationOptions>
+		<CouponCode>Esplanade</CouponCode>
+		<Reviews>4011 reviews with 4 of 5 stars</Reviews>
+		<Link>
+			<Image>../c3331952/images/Mantra.jpg</Image>
+			<Webpage value="link3">https://www.jetstarholidays.com.au/SYD/MCY/MCYDPKG/5471</Webpage>
+		</Link>
+	</holiday>
+</TEMPLATE>

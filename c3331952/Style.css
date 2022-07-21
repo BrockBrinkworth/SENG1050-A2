@@ -1,0 +1,132 @@
+/*style sheet
+* Brock Brinkworth c3331952
+* Date:11/09/2020 
+*/
+
+/*Navigation*/
+nav{
+	color: gray; 
+	text-align:center;
+	width: 100%
+}
+
+/*navigation bar*/
+#navbar{
+	color: white;
+	background-color: black;
+}
+
+/*Head*/
+#head { 
+	width: 98% 
+}
+
+/*Body*/
+body 				{ 
+	background-repeat: no-repeat;
+	background-attachment: fixed;  
+	background-size: cover; 
+	margin-left: 1cm; 
+	float: left;
+	display: flex;
+	flex-direction: column;
+}
+
+/*Table*/
+table, th, td {
+	border-collapse: collapse;
+	border: 1px solid black;
+	vertical-align: bottom;
+	background-color:lightgrey;
+}
+
+html, body {
+    height: 100%;
+	width: 98%;
+	min-width: 700px;
+}
+
+	body.home 		{
+		background-image: url("../c3331952/images/back.jpg");
+}
+	body.privacy 	{
+		background-image: url("../c3331952/images/back2.jpg");
+}
+	body.terms 		{
+		background-image: url("../c3331952/images/back2.jpg");
+}
+	body.about 		{
+		background-image: url("../c3331952/images/back1.jpg");
+}
+	body.contact 	{
+		background-image: url("../c3331952/images/back1.jpg");
+}
+	body.data 	{
+		background-image: url("../c3331952/images/back3.jpg");
+}
+	
+/*Text*/
+h1 	{ 	
+	text-align: center; 
+	color: black; 
+	text-transform: uppercase 
+}
+h2 	{ 
+	text-align: left; 
+	text-decoration: underline; 
+	color: black;
+	background-color: #FFFF00; /*Banana colour*/
+}
+hr 	{ 
+	width: 98%; 
+	text-align: center 
+}
+p 	{ 
+	font-family: arial; 
+	color: white; 
+}
+h3 	{ 
+	font-family: arial; 
+	color: white; 
+	background-color: black;
+	text-align: right; 
+	font-size: 75%
+}
+div { 
+	text-align: center 
+}
+
+/*Images*/
+img { 
+	text-align: left; 
+	float: left; 
+	border: 5px solid #000000; 
+	border-style: solid; 
+	border-width: 5px 
+}
+
+/*Lists*/
+li {
+	float: left;
+}
+
+body.footr {
+	position: relative;
+	width: 98%;
+	bottom: 10px;
+}
+
+/*Link*/
+a:link{
+	color:white;
+}
+a:visited{
+	color:red;
+}
+a:hover {
+	font-size: 125%; 
+	color:yellow;
+}
+a:active{
+	color:green;
+}
